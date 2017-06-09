@@ -1,0 +1,39 @@
+.news-container {
+  font-family: @font-family-pingfang-light;
+  font-size: 2.0rem;
+  color: @white;
+  padding: 0 65px;
+}
+
+.news-list-container {
+  display: flex;
+  > * {
+    width: 100%;
+    background-color: rgba(7, 56, 134, .8);
+  }
+  > div:nth-child(2) {
+    border-top: 4px solid #1bbaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      //list-style-type: square;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .news-list-square{
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin-right: 8px;
+      background-color: #fff;
+      transform: rotate(45deg);
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
