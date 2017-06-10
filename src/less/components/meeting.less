@@ -1,5 +1,36 @@
-.meeting-container{
+@meeting-blue: #40c5ff;
+@meeting-border-grey: #e5e5e5;
+
+.meeting-container {
   font-family: @font-family-pingfang-regular;
   color: @grey-dark;
   font-size: 1.6rem;
+
+  .hightlight {
+    color: @meeting-blue;
+  }
+}
+
+.btn-time {
+  background-color: transparent;
+  border: 1px solid @meeting-border-grey;
+  &.active {
+    box-shadow: none;
+    border-color: @meeting-blue;
+    color: @meeting-blue;
+  }
+}
+
+.btn-time--left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-time--right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
