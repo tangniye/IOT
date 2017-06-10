@@ -4,5 +4,6 @@ $(function () {
    $("#news").load("app/components/_news.html");
    $("#guest").load("app/components/_guest.html");
    $("#meeting").load("app/components/_meeting.html");
+   $("#seat").load("app/components/_seat.html");
 
 });
