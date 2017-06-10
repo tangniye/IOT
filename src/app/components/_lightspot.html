@@ -7,7 +7,7 @@
     </h1>
     <p class="sub-title text-center mb50">实力商机火热打响，打造行业最强盛宴</p>
     <div class="lightspot-carousel-banner">
-        <div class="carousel jcarousel" data-jcarousel="true">
+        <div class="carousel" data-jcarousel="true">
             <ul class="carousel__indicators">
                 <li>
                     <div class="carousel-bg">
@@ -55,12 +55,42 @@
         </div>
         <ul class="carousel__control">
             <li>
-                <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true"><i class="fa fa-chevron-circle-left"></i></a>
+                <a class="jcarousel-control-prev" data-jcarouselcontrol="true"><i class="fa fa-chevron-circle-left"></i></a>
             </li>
             <li>
-                <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true"><i class="fa fa-chevron-circle-right"></i></a>
+                <a class="jcarousel-control-next" data-jcarouselcontrol="true"><i class="fa fa-chevron-circle-right"></i></a>
             </li>
         </ul>
     </div>
 
 </div>
+<script>
+    (function ($) {
+        $(function () {
+            var jcarousel = $('.carousel');
+
+            jcarousel.on('jcarousel:reload jcarousel:create', function () {
+                        var carousel = $(this),
+                                width = carousel.innerWidth();
+                        width = width / 4;
+
+                        carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+                    })
+                    .jcarousel({
+                        wrap: 'circular'
+                    });
+
+            $('.jcarousel-control-prev')
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+
+            $('.jcarousel-control-next')
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
+
+        });
+    })(jQuery);
+
+</script>

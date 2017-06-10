@@ -1,16 +1,63 @@
 <img class="fill-bg" src="assets/image/news-bg.jpg" alt="">
 <div class="container news-container absolute-center">
-    <ul>
-        <li class="news-list-container">
-            <div><img src="assets/image/news-img-1.jpg" alt=""></div>
-            <div>
-                <ul>
-                    <li><span class="news-list-square"></span>多地推广NB-IoT试点应用 5G商用或加速落地</li>
-                    <li><span class="news-list-square"></span>新一代物联网(NB-IoT)正式商用</li>
-                    <li><span class="news-list-square"></span>基于蜂窝通信技术实现的物联网(IoT)M2M通信</li>
-                    <li><span class="news-list-square"></span>重庆移动首个蜂窝物联网实施</li>
-                </ul>
-            </div>
-        </li>
-    </ul>
+    <div class="news-carousel-banner">
+        <div class="news-carousel-container jcarousel" data-jcarousel="true">
+            <ul>
+                <li class="news-list-container">
+                    <div><img src="assets/image/news-img-1.jpg" alt=""></div>
+                    <div>
+                        <ul>
+                            <li><span class="news-list-square"></span>1.多地推广NB-IoT试点应用 5G商用或加速落地</li>
+                            <li><span class="news-list-square"></span>新一代物联网(NB-IoT)正式商用</li>
+                            <li><span class="news-list-square"></span>基于蜂窝通信技术实现的物联网(IoT)M2M通信</li>
+                            <li><span class="news-list-square"></span>重庆移动首个蜂窝物联网实施</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="news-list-container">
+                    <div><img src="assets/image/news-img-1.jpg" alt=""></div>
+                    <div>
+                        <ul>
+                            <li><span class="news-list-square"></span>2.多地推广NB-IoT试点应用 5G商用或加速落地</li>
+                            <li><span class="news-list-square"></span>新一代物联网(NB-IoT)正式商用</li>
+                            <li><span class="news-list-square"></span>基于蜂窝通信技术实现的物联网(IoT)M2M通信</li>
+                            <li><span class="news-list-square"></span>重庆移动首个蜂窝物联网实施</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="news-list-container">
+                    <div><img src="assets/image/news-img-1.jpg" alt=""></div>
+                    <div>
+                        <ul>
+                            <li><span class="news-list-square"></span>3.多地推广NB-IoT试点应用 5G商用或加速落地</li>
+                            <li><span class="news-list-square"></span>新一代物联网(NB-IoT)正式商用</li>
+                            <li><span class="news-list-square"></span>基于蜂窝通信技术实现的物联网(IoT)M2M通信</li>
+                            <li><span class="news-list-square"></span>重庆移动首个蜂窝物联网实施</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="jcarousel-pagination news-carousel-pagination" data-jcarouselpagination="true">
+        <a href="#1" class="active">1</a>
+        <a href="#2">2</a>
+        <a href="#3">3</a>
+    </p>
 </div>
+<script>
+    (function ($) {
+        $(function () {
+            $('.jcarousel').jcarousel();
+            $('.jcarousel-pagination')
+                    .on('jcarouselpagination:active', 'a', function () {
+                        $(this).addClass('active');
+                    })
+                    .on('jcarouselpagination:inactive', 'a', function () {
+                        $(this).removeClass('active');
+                    })
+                    .jcarouselPagination();
+        });
+    })(jQuery);
+
+</script>
