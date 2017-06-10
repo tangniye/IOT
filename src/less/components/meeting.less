@@ -6,12 +6,17 @@
   color: @grey-dark;
   font-size: 1.6rem;
 
-  .hightlight {
+  .highlight {
     color: @meeting-blue;
+  }
+
+  .bold{
+    font-weight: bold;
   }
 }
 
 .btn-time {
+  color: @grey-dark;
   background-color: transparent;
   border: 1px solid @meeting-border-grey;
   &.active {
@@ -33,4 +38,28 @@
   border-bottom-left-radius: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.table > thead > tr,
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 0;
 }
